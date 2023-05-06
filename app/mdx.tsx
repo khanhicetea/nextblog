@@ -1,5 +1,6 @@
 import remarkGfm from 'remark-gfm';
 import rehypePrism from 'rehype-prism-plus';
+import imageSize from "rehype-img-size";
 import { compileMDX } from "next-mdx-remote/rsc";
 import Image from "next/image";
 
@@ -16,7 +17,7 @@ const components = {
     p: (props: BaseProps) => <p className="my-3 text-base text-justify leading-6" {...props}></p>,
     ul: (props: BaseProps) => <ul className="pl-7 text-base list-disc leading-6" {...props}></ul>,
     li: (props: BaseProps) => <li className="my-2" {...props}></li>,
-    img: (props: ImgProps) => <Image width={1080 as any} height={1080 as any} alt={props.alt!} {...props}></Image>,
+    // img: (props: ImgProps) => <Image width={1080 as any} height={1080 as any} alt={props.alt!} {...props}></Image>,
 }
 
 export default async function parseMDX(rawContent: string) {
@@ -25,7 +26,9 @@ export default async function parseMDX(rawContent: string) {
         options: {
             parseFrontmatter: true, mdxOptions: {
                 remarkPlugins: [[remarkGfm]],
-                rehypePlugins: [[rehypePrism, { ignoreMissing: true, showLineNumbers: false }]]
+                rehypePlugins: [
+                    [rehypePrism, { ignoreMissing: true, showLineNumbers: false }],
+                ]
             }
         },
         components,
