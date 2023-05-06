@@ -1,0 +1,13 @@
+---
+date: "2018-07-26T00:00:01"
+title: "#TIL : SQL Wildcard Characters"
+description: "I learned on 2018-07-26 about database"
+tags: ["database"]
+layout: post
+---
+
+
+SQL databases support 2 main wildcards :
+
+- `%` : represents zero, one, or multiple characters
+- `_` : represents a single character

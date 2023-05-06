@@ -1,0 +1,25 @@
+---
+date: "2018-03-01T00:00:01"
+title: "#TIL : Prevent source hacking from .git directory exposing"
+description: "I learned on 2018-03-01 about hacking, security, sysadmin"
+tags: ["hacking", "security", "sysadmin"]
+layout: post
+---
+
+
+Many web project use Git as source version control tools. So in production
+server, we could expose the hidden `.git` directory - which contains all most
+infomation about project source code.
+
+To "rip" a source code from a vulnerable website, we can use this tool : https://github.com/kost/dvcs-ripper#git
+
+So to prevent this happens, try to deny all http access to hidden files and
+directories (usually starts by `.` character)
+
+Example of Nginx config
+
+```
+location ~ /\. {
+    deny all;
+}
+```

@@ -1,0 +1,17 @@
+---
+date: "2016-03-26T00:00:01"
+title: "#TIL : Bash shell shortcuts"
+description: "I learned on 2016-03-26 about bash, shell, shortcuts, sysadmin"
+tags: ["bash", "shell", "shortcuts", "sysadmin"]
+layout: post
+---
+
+
+- Ctrl + e : jump cursor to EOL
+- Ctrl + a : jump cursor to BOL (beginning of line)
+- Ctrl + u : delete all from cursor to BOL
+- Ctrl + k : delete all from cursor to EOL
+- Ctrl + r : search history, press again for next search
+- Ctrl + l : clear shell screen
+- Ctrl + c : terminate the command (sometimes have to press twice)
+- Ctrl + z : suspend the command, back to shell. Run `fg` to resume the command

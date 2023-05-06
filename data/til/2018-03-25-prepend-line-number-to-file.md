@@ -1,0 +1,18 @@
+---
+date: "2018-03-25T00:00:01"
+title: "#TIL : Prepend line number to file"
+description: "I learned on 2018-03-25 about file, string, sysadmin"
+tags: ["file", "string", "sysadmin"]
+layout: post
+---
+
+
+When you want to prepend **line number** in every line of file, use the `-n` flag of `cat` tool.
+
+Example :
+
+`cat -n a.txt`
+
+Or even from many file
+
+`cat -n a.txt b.txt c.txt`
