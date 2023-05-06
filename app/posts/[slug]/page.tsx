@@ -48,7 +48,7 @@ export default async function Post({ params }: SlugParamsProps) {
                     <a href="/author/mario-sanchez">KhanhIceTea</a>
                   </p>
                   <div className="flex items-center space-x-2 text-sm">
-                    <time className="text-gray-500 dark:text-gray-400" datetime="2022-10-21T15:48:00.000Z">October 21, 2022</time>
+                    <time className="text-gray-500 dark:text-gray-400" dateTime="2022-10-21T15:48:00.000Z">October 21, 2022</time>
                     <span>· 8 min read</span>
                   </div>
                 </div>
