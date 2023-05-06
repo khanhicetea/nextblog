@@ -14,7 +14,7 @@ export default function Home() {
         <h1>Hello</h1>
         <ul>
           {PostFiles.map((file, idx) => (
-            <li>
+            <li key={file}>
               <Link className="text-blue-600" href={`/posts/${file}`}>{file}</Link>
             </li>
           ))}

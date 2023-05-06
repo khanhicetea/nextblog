@@ -16,7 +16,7 @@ const components = {
     p: (props: BaseProps) => <p className="my-3 text-base text-justify leading-6" {...props}></p>,
     ul: (props: BaseProps) => <ul className="pl-7 text-base list-disc leading-6" {...props}></ul>,
     li: (props: BaseProps) => <li className="my-2" {...props}></li>,
-    img: (props: ImgProps) => <Image width={1080} height={1080} {...props}></Image>,
+    img: (props: ImgProps) => <Image width={1080} height={1080} alt={props.alt} {...props}></Image>,
 }
 
 export default async function parseMDX(rawContent: string) {
